@@ -58,21 +58,35 @@
 
 
     // }
-    const arr = [10, 8, 5, 15, 1, 0, 101, 9, -1, -5];
+    // const arr = [10, 8, 5, 15, 1, 0, 101, 9, -1, -5];
 
 
-    for (let i = 0; i < arr.length - 1; i++) {
+    // for (let i = 0; i < arr.length - 1; i++) {
 
-        for (let j = 0; j < arr.length - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+    //     for (let j = 0; j < arr.length - i - 1; j++) {
+    //         if (arr[j] > arr[j + 1]) {
+    //             let temp = arr[j];
+    //             arr[j] = arr[j + 1];
+    //             arr[j + 1] = temp;
 
-            }
+    //         }
+    //     }
+
+    // }
+    const arr = [10, 8, 5, 15];
+
+    for (let i = 0; i < arr.length; i++) {
+        let j = i;
+
+        while (j > 0 && arr[j - 1] > arr[j]) {
+            let temp = arr[j - 1];
+            arr[j - 1] = arr[j];
+            arr[j] = temp
+            j--;
         }
 
     }
+
 
     console.log(arr);
 
