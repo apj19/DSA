@@ -14,24 +14,67 @@
 <script>
 
     //1.move zeros to end array
-    const input = [1, 0, 2, 3, 2, 0, 0, 4, 0];
-    let count = [];
+    // const input = [1, 0, 2, 3, 2, 0, 0, 4, 0];
+    // let count = [];
 
-    for (const item of input) {
-        if (item != 0) {
-            count.push(item)
+    // for (const item of input) {
+    //     if (item != 0) {
+    //         count.push(item)
+    //     }
+    // }
+
+    // for (let i = 0; i < input.length; i++) {
+    //     if (i < count.length) {
+    //         input[i] = count[i];
+    //     } else {
+    //         input[i] = 0;
+    //     }
+    // }
+
+    //sorting methods
+    //1. selection sort
+    // console.log("Working!");
+
+    // const arr = [10, 8, 5, 15, 1, 9, 101, 9];
+    // console.log(arr);
+
+    // for (let i = 0; i < arr.length; i++) {
+
+    //     let min = i;
+
+
+    //     for (let j = i; j < arr.length; j++) {
+
+    //         if (arr[j] < arr[min]) {
+    //             min = j;
+    //         }
+    //     }
+
+
+    //     let temp = arr[i];
+    //     arr[i] = arr[min];
+    //     arr[min] = temp;
+    //     // console.log(arr, i);
+
+
+    // }
+    const arr = [10, 8, 5, 15, 1, 0, 101, 9, -1, -5];
+
+
+    for (let i = 0; i < arr.length - 1; i++) {
+
+        for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+
+            }
         }
+
     }
 
-    for (let i = 0; i < input.length; i++) {
-        if (i < count.length) {
-            input[i] = count[i];
-        } else {
-            input[i] = 0;
-        }
-    }
-
-    console.log(input);
+    console.log(arr);
 
 
 
