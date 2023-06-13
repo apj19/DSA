@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sorting Algorithms</h1>
+</body>
+<script>
+
+    console.log("Sorting Algorithms");
+
+    //find min and swap it with i
+
+    const input = [201, 3, 15, 90, 75, 101, 1];
+    console.log("Input", input);
+
+    function selectionSort(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let min = i;
+            for (let j = i; j < arr.length; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+            //swapping
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+
+    // selectionSort(input);
+
+    function bubbleSort(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+
+
+            for (let j = 0; j < arr.length - 1 - i; j++) {
+
+                if (arr[j + 1] < arr[j]) {
+                    let temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+
+            }
+
+
+        }
+    }
+
+    // bubbleSort(input)
+
+
+    function inserstionSort(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            let j = i;
+
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                let temp = arr[j];
+                arr[j] = arr[j - 1];
+                arr[j - 1] = temp;
+                j--;
+            }
+
+            console.log(arr);
+
+        }
+
+    }
+
+    // inserstionSort(input);
+
+    function mergeSort(arr, low, high) {
+
+        function sortingMerging(arr, low, mid, high) {
+
+            let temp = [];
+            let left = low;
+            let right = mid + 1;
+
+            while (left <= mid && right <= high) {
+                if (arr[left] <= arr[right]) {
+                    temp.push(arr[left]);
+                    left++;
+                } else {
+                    temp.push(arr[right]);
+                    right++;
+                }
+            }
+
+            while (left <= mid) {
+                temp.push(arr[left]);
+                left++;
+
+            }
+
+            while (right <= high) {
+                temp.push(arr[right]);
+                right++;
+            }
+
+            for (let i = low; i <= high; i++) {
+                arr[i] = temp[i - low];
+            }
+
+        }
+
+
+        function msort(arr, low, high) {
+            if (low >= high) return;
+
+            let mid = parseInt((low + high) / 2);
+
+            msort(arr, low, mid);
+            msort(arr, mid + 1, high);
+            sortingMerging(arr, low, mid, high);
+        }
+
+
+        msort(arr, low, high);
+
+
+    }
+
+
+    // mergeSort(input, 0, input.length - 1);
+
+    console.log("output", input);
+
+
+</script>
+
+</html>
