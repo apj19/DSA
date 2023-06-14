@@ -132,7 +132,97 @@
 
     // mergeSort(input, 0, input.length - 1);
 
-    console.log("output", input);
+    function quickSortMain(arr, low, high) {
+
+        function qs(arr, low, high) {
+            if (low < high) {
+                let pivot = findpivot(arr, low, high);
+                qs(arr, low, pivot - 1);
+                qs(arr, pivot + 1, high);
+
+            }
+        }
+
+        function findpivot(arr, low, high) {
+            let p = arr[low];
+            let i = low;
+            let j = high;
+
+            while (i < j) {
+
+                while (arr[i] <= p && i <= high - 1) {
+                    i++;
+                }
+
+                while (arr[j] >= p && j >= low + 1) {
+                    j--;
+                }
+
+
+                if (i < j) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+
+                console.log(arr);
+
+            }
+
+            let temp = arr[low];
+            arr[low] = arr[j];
+            arr[j] = temp;
+
+            return j;
+        }
+
+        qs(arr, low, high);
+
+    }
+
+    // quickSortMain(input, 0, input.length - 1);
+
+    function findpivot(arr, low, high) {
+        let p = arr[low];
+        let i = low;
+        let j = high;
+
+        while (i < j) {
+
+            console.log(i, j);
+
+            while (arr[i] <= p && i <= high - 1) {
+                i++;
+            }
+
+            while (arr[j] >= p && j >= low + 1) {
+                j--;
+            }
+
+            if (i < j) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+
+            console.log(arr);
+
+        }
+
+        let temp = arr[low];
+        arr[low] = arr[j];
+        arr[j] = temp;
+
+        // console.log(j);
+
+        return j;
+    }
+
+    const t = [8, 9, 10]
+    let r = findpivot(input, 0, input.length - 1);
+    console.log(input, r);
+
+    // console.log("output", input);
 
 
 </script>
