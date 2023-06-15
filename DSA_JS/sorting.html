@@ -189,7 +189,7 @@
 
         while (i < j) {
 
-            console.log(i, j);
+            // console.log(i, j);
 
             while (arr[i] <= p && i <= high - 1) {
                 i++;
@@ -205,7 +205,7 @@
                 arr[j] = temp;
             }
 
-            console.log(arr);
+            console.log(arr, i, j);
 
         }
 
@@ -218,9 +218,9 @@
         return j;
     }
 
-    const t = [8, 9, 10]
-    let r = findpivot(input, 0, input.length - 1);
-    console.log(input, r);
+    const t = [8, 4, 12, 9, 2, 3]
+    let r = findpivot(t, 0, t.length - 1);
+    console.log(t, r);
 
     // console.log("output", input);
 
