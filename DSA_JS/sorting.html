@@ -16,8 +16,7 @@
 
     //find min and swap it with i
 
-    const input = [201, 3, 15, 90, 75, 101, 1];
-    console.log("Input", input);
+
 
     function selectionSort(arr) {
         for (let i = 0; i < arr.length; i++) {
@@ -220,11 +219,139 @@
 
 
 
-    const t = [8, 4, 12, 9, 2, 3]
-    let r = findpivot(t, 0, t.length - 1);
-    console.log(t, r);
+    // const t = [8, 4, 12, 9, 2, 3]
+    // let r = findpivot(t, 0, t.length - 1);
+    // console.log(t, r);
 
     // console.log("output", input);
+
+
+
+    function selectionSort1(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            let min = i;
+
+            for (let j = i; j < arr.length; j++) {
+
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+
+            // console.log(arr, i);
+        }
+
+
+    }
+
+    // selectionSort1(input);
+
+    function bubbleSort1(arr) {
+
+        for (let i = 0; i < arr.length - 1; i++) {
+
+            for (let j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j + 1] < arr[j]) {
+                    let temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+            console.log(arr, i);
+        }
+    }
+
+    // bubbleSort1(input);
+
+    function insertionSort1(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            let j = i;
+
+            while (j > 0 && arr[j] < arr[j - 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j - 1];
+                arr[j - 1] = temp;
+                j--;
+            }
+        }
+
+    }
+
+    // insertionSort1(input);
+
+    function mergeSort1(arr, low, high) {
+
+        function merge(arr, low, mid, high) {
+
+            let temp = [];
+            left = low;
+            right = mid + 1;
+
+            while (left <= mid && right <= high) {
+
+                if (arr[left] <= arr[right]) {
+                    temp.push(arr[left]);
+                    left++;
+                } else {
+                    temp.push(arr[right]);
+                    right++;
+                }
+            }
+
+
+            while (left <= mid) {
+                temp.push(arr[left]);
+                left++;
+
+            }
+
+
+            while (right <= high) {
+                temp.push(arr[right]);
+                right++;
+            }
+
+
+            for (let i = low; i <= high; i++) {
+                arr[i] = temp[i - low];
+            }
+        }
+
+
+
+
+        function mergeSort(arr, low, high) {
+            if (low >= high) return;
+
+            let mid = parseInt((low + high) / 2);
+
+            mergeSort1(arr, low, mid);
+            mergeSort1(arr, mid + 1, high);
+            merge(arr, low, mid, high);
+        }
+
+
+        mergeSort(arr, low, high);
+
+
+
+    }
+
+    const input = [10, 5, 4, 2, 25];
+    console.log("Input", input);
+
+    mergeSort1(input, 0, input.length - 1)
+
+
+    console.log("output", input);
+
 
 
 </script>
