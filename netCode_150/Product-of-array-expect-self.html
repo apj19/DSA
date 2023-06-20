@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Prosuct of array expect self</h1>
+</body>
+<script>
+
+    const arr = [-1, 1, 0, -3, 3];
+    const left = [];
+    const right = [];
+    let p = 1;
+    let p1 = 1;
+
+    for (let i = 0; i < arr.length; i++) {
+
+        left[i] = p;
+        p = p * arr[i];
+    }
+
+    for (let j = arr.length - 1; j >= 0; j--) {
+
+        right[j] = p1;
+        p1 = p1 * arr[j];
+
+
+
+
+    }
+
+    let output = []
+
+    for (let k = 0; k < arr.length; k++) {
+
+        output[k] = left[k] * right[k];
+    }
+
+    console.log(left);
+    console.log(right);
+    console.log(output);
+
+
+
+
+</script>
+
+</html>

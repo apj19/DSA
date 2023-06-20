@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Valid Suduku</h1>
+</body>
+<script>
+    const board =
+        [["5", "3", ".", ".", "7", ".", ".", ".", "."]
+            , ["6", ".", ".", "1", "9", "5", ".", ".", "."]
+            , [".", "9", "8", ".", ".", ".", ".", "6", "."]
+            , ["8", ".", ".", ".", "6", ".", ".", ".", "3"]
+            , ["4", ".", ".", "8", ".", "3", ".", ".", "1"]
+            , ["7", ".", ".", ".", "2", ".", ".", ".", "6"]
+            , [".", "6", ".", ".", ".", ".", "2", "8", "."]
+            , [".", ".", ".", "4", "1", "9", ".", ".", "5"]
+            , [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+
+    console.log(board[0]);
+
+    let ans = true;
+
+
+    // console.log(t1, t3);
+
+    function validateRow(arr) {
+        let temp = arr.filter(e => e != ".");
+        // console.log(temp);
+        let t1 = temp.length;
+        let t2 = new Set(temp);
+        let t3 = t2.size;
+
+        return t1 == t3;
+
+    }
+
+
+    for (let i = 0; i < board.length; i++) {
+        // console.log(validateRow(board[i]));
+        ans = ans * validateRow(board[i]);
+
+    }
+
+    console.log(ans);
+</script>
+
+</html>
