@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quick Sort
+</body>
+
+<script>
+    console.log("Quick Sort");
+
+    const input = [9, 8, 5, 3, 12];
+
+    function findPivot(arr, low, high) {
+        let p = arr[low];
+        let i = low;
+        let j = high;
+
+        while (i < j) {
+
+            while (arr[i] <= p && i <= high) {
+                i++;
+            }
+
+            while (arr[j] >= p && j >= low) {
+                j--;
+            }
+
+            if (i < j) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+
+            console.log(i, j, arr);
+        }
+
+        let temp = arr[low];
+        arr[low] = arr[j];
+        arr[j] = temp;
+
+        console.log(`index ${j} array ${arr}`);
+
+
+    }
+
+
+    findPivot(input, 0, input.length - 1);
+
+
+</script>
+
+</html>
