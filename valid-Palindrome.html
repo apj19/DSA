@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Valid Palindrome</h1>
+
+
+
+</body>
+<script>
+    console.log("Valid Palindrome");
+
+    let a = "B";
+
+    // console.log(a.toLowerCase());
+    // console.log(a.toUpperCase());
+
+    let str = 'A man, a plan, a canal: Panama';
+
+    let cleanStr =
+        str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+
+
+    let left = 0;
+    let right = cleanStr.length - 1;
+
+    while (left < right) {
+        if (cleanStr[left] != cleanStr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+
+
+
+
+
+
+
+</script>
+
+</html>
