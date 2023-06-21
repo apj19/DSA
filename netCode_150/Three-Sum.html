@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Three Sum</h1>
+</body>
+<script>
+    console.log("Tree sum problem");
+    const res = []
+
+    // const nums = [-1, 0, 1, 2, -1, -4];
+    // nums.sort((a, b) => a - b);
+
+
+    // for (let i = 0; i < nums.length; i++) {
+
+    //     const a = nums[i];
+
+    //     if (a > 0) {
+    //         break;
+    //     }
+
+    //     if (i > 0 && a === nums[i - 1]) {
+    //         continue;
+    //     } else {
+
+    //         let l = i + 1;
+    //         let r = nums.length - 1;
+
+    //         while (l < r) {
+
+    //             const sum = a + nums[l] + nums[r];
+
+    //             if (sum > 0) {
+    //                 r--;
+    //             } else if (sum < 0) {
+    //                 l++;
+    //             } else {
+
+    //                 res.push([a, nums[l], nums[r]]);
+    //                 l++;
+    //                 r--;
+    //                 while (nums[l] === nums[l - 1] && l < r) {
+    //                     l++;
+    //                 }
+
+    //             }
+    //         }
+
+
+
+
+
+    //     }
+
+
+    // }
+
+    // console.log(res);
+    let x = 121;
+    let r = 0;
+
+    while (x > 0) {
+
+        let reminder = x % 10;
+        r = r * 10 + reminder;
+        x = parseInt(x / 10);
+
+    }
+
+    console.log(r);
+
+
+</script>
+
+</html>

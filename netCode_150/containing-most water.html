@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Containing most water</h1>
+
+</body>
+<script>
+    console.log("Containing Most Water");
+    // const nums = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+    const nums = [4, 3, 2, 1, 4]
+
+    let max = 0;
+
+    // for (let i = 0; i < nums.length; i++) {
+
+    //     for (let j = i + 1; j < nums.length; j++) {
+    //         let min = Math.min(nums[i], nums[j]);
+    //         let area = min * (j - i);
+    //         // console.log(nums[i], nums[j], min, j, area);
+    //         if (area > max) {
+    //             max = area;
+    //         }
+    //     }
+
+    // }
+
+    let l = 0;
+    let r = nums.length - 1;
+
+    while (l < r) {
+
+        let min = Math.min(nums[l], nums[r]);
+        max = Math.max(max, (min * (r - l)));
+
+        if (min == nums[l]) {
+            l++;
+        } else {
+            r--;
+        }
+
+    }
+
+    console.log(max);
+
+
+
+
+
+
+
+</script>
+
+</html>
