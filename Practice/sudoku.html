@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>valid Sudoku</h1>
+</body>
+<script>
+    console.log("Sudoku");
+
+    const boardt =
+        [["5", "3", ".", ".", "7", ".", ".", ".", "."]
+            , ["6", ".", ".", "1", "9", "5", ".", ".", "."]
+            , [".", "9", "8", ".", ".", ".", ".", "6", "."]
+            , ["8", ".", ".", ".", "6", ".", ".", ".", "3"]
+            , ["4", ".", ".", "8", ".", "3", ".", ".", "1"]
+            , ["7", ".", ".", ".", "2", ".", ".", ".", "6"]
+            , [".", "6", ".", ".", ".", ".", "2", "8", "."]
+            , [".", ".", ".", "4", "1", "9", ".", ".", "5"]
+            , [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+
+    const boardf =
+        [["8", "3", ".", ".", "7", ".", ".", ".", "."]
+            , ["6", ".", ".", "1", "9", "5", ".", ".", "."]
+            , [".", "9", "8", ".", ".", ".", ".", "6", "."]
+            , ["8", ".", ".", ".", "6", ".", ".", ".", "3"]
+            , ["4", ".", ".", "8", ".", "3", ".", ".", "1"]
+            , ["7", ".", ".", ".", "2", ".", ".", ".", "6"]
+            , [".", "6", ".", ".", ".", ".", "2", "8", "."]
+            , [".", ".", ".", "4", "1", "9", ".", ".", "5"]
+            , [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+
+
+
+
+    function validSudoku(board) {
+        let ans = true;
+        function validateRow(arr) {
+
+            let filter = arr.filter((e) => e != '.');
+
+            let set = new Set(filter);
+
+            return filter.length == set.size;
+
+        }
+
+        //validating row
+        // for (let i = 0; i < 9; i++) {
+
+        // }
+        //validate columns
+
+        for (let i = 0; i < 9; i++) {
+
+            ans = ans * validateRow(board[i]);
+
+            let temp = [];
+            for (let j = 0; j < 9; j++) {
+                temp.push(board[j][i]);
+            }
+            ans = ans * validateRow(temp);
+
+        }
+
+
+
+        // 3*3 squares
+        let n = 9;
+
+        for (let i = 0; i < n - 2; i = i + 3) {
+
+            for (let j = 0; j < n - 2; j = j + 3) {
+
+                let rend = i + 3;
+                let cend = j + 3;
+                let temp = [];
+
+                for (let k = i; k < rend; k++) {
+                    for (let l = j; l < cend; l++) {
+                        temp.push(board[k][l]);
+                    }
+                }
+                // console.log(temp);
+                ans = ans * validateRow(temp);
+
+
+            }
+
+        }
+
+        console.log(ans);
+
+    }
+
+    validSudoku(boardf);
+
+
+
+
+
+
+
+
+</script>
+
+</html>

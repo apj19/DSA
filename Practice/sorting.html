@@ -133,6 +133,60 @@
 
     }
 
+
+
+    function quickSortMain(arr, low, high) {
+
+
+        function quickSort(arr, low, high) {
+
+            if (low < high) {
+
+                let pindex = findPivot(arr, low, high);
+                quickSort(arr, low, pindex - 1);
+                quickSort(arr, pindex + 1, high);
+            }
+
+        }
+
+        function findPivot(arr, low, high) {
+            let p = arr[low];
+            let i = low;
+            let j = high;
+
+            while (i < j) {
+
+                while (arr[i] <= p && i <= high) {
+                    i++;
+                }
+
+                while (arr[j] > p && j >= low) {
+                    j--;
+                }
+
+                if (i < j) {
+                    let temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+
+            }
+
+            let temp = arr[j];
+            arr[j] = arr[low];
+            arr[low] = temp;
+
+            return j;
+        }
+
+
+        quickSort(arr, low, high);
+
+
+
+
+
+    }
     const input = [8, 12, 15, 9, 4, 8, 2];
 
     console.log("input", input);
@@ -141,7 +195,8 @@
     // selectionSort(input);
     // bubbleSort(input);
     //insertionSort(input);
-    mergeSortMain(input, 0, input.length - 1);
+    // mergeSortMain(input, 0, input.length - 1);
+    quickSortMain(input, 0, input.length - 1)
 
     console.log("output", input);
 
