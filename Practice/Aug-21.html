@@ -32,8 +32,54 @@
 
     // }
     // console.log(c);
-    let str = n.toString();
-    console.log(str.length);
+    // let str = n.toString();
+    // console.log(str.length);
+
+    // let a = 'c';
+    // let b = 'f';
+    // console.log(b > a);
+
+
+    const nums = [5, 7, 7, 8, 8, 10];
+    const target = 8;
+
+    let l = 0;
+    let h = nums.length - 1;
+    let ansf = 0;
+    let ansl = 0;
+
+    while (l <= h) {
+        let m = parseInt((l + h) / 2);
+
+        if (nums[m] >= target) {
+            ansf = m;
+            h = m - 1;
+        } else {
+            l = m + 1;
+        }
+
+    }
+    l = 0;
+    h = nums.length - 1;
+
+    while (l <= h) {
+        let m = parseInt((l + h) / 2);
+
+        if (nums[m] <= target) {
+            ansl = m;
+            l = m + 1;
+        } else {
+            h = m - 1;
+        }
+
+    }
+
+    console.log(ansf);
+    console.log(ansl);
+
+
+
+
 </script>
 
 </html>
