@@ -10,5 +10,37 @@
 <body>
     <h1>Aug-25</h1>
 </body>
+<script>
+    let arr = [14, 20, 2, 7];
+
+    let l = 0;
+    let h = arr.length - 1;
+    let min = arr[0];
+
+
+    while (l <= h) {
+
+        let m = parseInt(l + (h - l) / 2);
+
+        if (arr[l] <= arr[m]) {
+            min = Math.min(min, arr[m]);
+            l = m + 1;
+
+        } else {
+            min = Math.min(min, arr[m]);
+            h = m - 1;
+        }
+        console.log(m, min);
+
+
+    }
+
+    console.log(min);
+
+
+
+
+
+</script>
 
 </html>
