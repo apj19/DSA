@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Selection sort</h1>
+</body>
+
+<script>
+
+    const arr = [7, 5, 9, 2, 8];
+
+    //selection sort
+
+    //find minimum in each itration and place at start
+
+    for (let i = 0; i < arr.length - 1; i++) {
+
+        let min = i;
+
+        for (let j = i + 1; j < arr.length; j++) {
+
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+
+
+        }
+
+        let temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;
+
+
+
+
+    }
+
+    console.log(arr);
+
+
+</script>
+
+</html>
