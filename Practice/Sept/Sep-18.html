@@ -8,7 +8,32 @@
 </head>
 
 <body>
-
+    <h1>Two sum</h1>
 </body>
+
+<script>
+    let nums = [2, 7, 11, 15];
+    let map = new Map();
+    for (let i = 0; i < nums.length; i++) {
+
+        let ans = 9 - nums[i];
+
+
+        if (map.get(ans) != undefined) {
+            console.log([map.get(ans), i]);
+        } else {
+            map.set(nums[i], i)
+        }
+
+
+
+    }
+
+    console.log(map);
+
+    // console.log(map.get(18));
+
+
+</script>
 
 </html>
