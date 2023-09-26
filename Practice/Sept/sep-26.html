@@ -8,7 +8,94 @@
 </head>
 
 <body>
-
+    <h1>pattern</h1>
 </body>
+<script>
+    console.log("hiiiii");
+
+
+    let n = 5; // row or column count
+    // defining an empty string
+    let string = "";
+
+    for (let i = 1; i <= n; i++) {
+
+        for (let j = i; j >= 1; j--) {
+            string += `${j} `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+    // console.log(string);
+    console.log("Patt2");
+
+    string = "";
+
+    for (let i = 5; i >= 1; i--) {
+
+        for (let j = i; j >= 1; j--) {
+            string += "* ";
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+    console.log("Patt3");
+
+    string = "";
+
+    for (let i = 5; i >= 1; i--) {
+
+        for (let j = 1; j <= i; j++) {
+            string += `${j} `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+    console.log("Patt4");
+
+    string = "";
+
+    for (let i = 1; i <= 5; i++) {
+
+        for (let j = 5; j > (5 - i); j--) {
+            string += `${j} `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+
+    console.log("Patt5");
+
+    string = "";
+
+    for (let i = 1; i <= 6; i++) {
+
+        for (let j = 10; j < (10 + i); j++) {
+            string += `${j} `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+
+</script>
 
 </html>
