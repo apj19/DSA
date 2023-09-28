@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hard patterns</h1>
+</body>
+<script>
+
+    let string;
+    console.log("Pyramid");
+    string = "";
+    let n = 5
+
+    for (let i = 1; i <= n; i++) {
+
+        for (let j = 1; j <= (n - i); j++) {
+            string += " ";
+        }
+
+        for (let k = 1; k <= (i * 2) - 1; k++) {
+            string += "*";
+
+
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+
+    console.log("Pyramid 1");
+    string = "";
+
+
+    for (let i = 1; i <= n; i++) {
+
+        // console.log(i);
+        for (let j = 1; j <= (5 - i); j++) {
+            string += `#`;
+        }
+
+
+        let c = (i * 2) - 1;
+        let count = 0;
+        for (let k = 1; k <= i; k++) {
+            string += `${k}`;
+            count++;
+        }
+        for (let l = count - 1; l >= 1; l--) {
+            string += `${l}`;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
