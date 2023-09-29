@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ptterns</h1>
+</body>
+<script>
+
+    let string;
+    console.log("Dimond");
+    string = "";
+    n = 4;
+
+    for (let i = 1; i <= n; i++) {
+
+        //space
+        for (let j = 1; j <= (n - i); j++) {
+            string += ` `;
+        }
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+    for (let i = 4; i >= 1; i--) {
+
+        //space
+
+
+        for (let j = 1; j <= (n - i); j++) {
+            string += ` `;
+        }
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+
+
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+</script>
+
+</html>

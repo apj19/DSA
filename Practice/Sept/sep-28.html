@@ -44,18 +44,18 @@
 
         // console.log(i);
         for (let j = 1; j <= (5 - i); j++) {
-            string += `#`;
+            string += `  `;
         }
 
 
         let c = (i * 2) - 1;
         let count = 0;
         for (let k = 1; k <= i; k++) {
-            string += `${k}`;
+            string += ` ${k}`;
             count++;
         }
-        for (let l = count - 1; l >= 1; l--) {
-            string += `${l}`;
+        for (let l = i - 1; l >= 1; l--) {
+            string += ` ${l}`;
         }
         string += "\n";
         console.log(string);
@@ -63,6 +63,135 @@
 
 
     }
+
+
+
+    console.log("Pyramid 2");
+    string = "";
+
+
+    for (let i = 1; i <= n; i++) {
+
+        // console.log(i);
+        for (let j = 1; j < i; j++) {
+            string += ` `;
+        }
+
+        for (let k = i; k <= n; k++) {
+            string += `*`;
+
+        }
+
+        for (let l = 1; l <= n - i; l++) {
+            string += `*`;
+
+        }
+
+        string += "\n";
+        console.log(string);
+        string = "";
+
+
+    }
+
+
+
+    console.log("Pyramid 3");
+    string = "";
+    n = 4;
+
+    for (let i = n; i >= 1; i--) {
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        //space
+        for (let j = 1; j <= 2 * (n - i); j++) {
+            string += `  `;
+        }
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+
+    for (let i = 1; i <= n; i++) {
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        //space
+        for (let j = 1; j <= 2 * (n - i); j++) {
+            string += `  `;
+        }
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+
+
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+
+
+
+    console.log("Butterflay");
+    string = "";
+    n = 5;
+
+    for (let i = 1; i <= n; i++) {
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        //space
+        for (let j = 1; j <= 2 * (n - i); j++) {
+            string += `  `;
+        }
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+
+    for (let i = n - 1; i >= 1; i--) {
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+        //space
+        for (let j = 1; j <= 2 * (n - i); j++) {
+            string += `  `;
+        }
+
+        for (let k = 1; k <= i; k++) {
+            string += `* `;
+        }
+
+
+        string += "\n";
+        console.log(string);
+        string = "";
+
+    }
+
+
+
+
 
 
 
