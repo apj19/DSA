@@ -58,12 +58,12 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
-        int[] intArray = new int[] { 100, 20, 200 };
+        // int[] intArray = new int[] { 100, 20, 200 };
 
-        System.out.println(findLargestElement(intArray));
-        System.out.println(findindexofLargestElement(intArray));
-        System.out.println(findsecondLargestElement(intArray));
-        System.out.println(checkarrayissorted(intArray));
+        // System.out.println(findLargestElement(intArray));
+        // System.out.println(findindexofLargestElement(intArray));
+        // System.out.println(findsecondLargestElement(intArray));
+        // System.out.println(checkarrayissorted(intArray));
 
     }
 }
