@@ -14,11 +14,14 @@
     console.log("Selection sort");
 
 
-    const arr = [9, 5, 8, 3, 1, 2, 7, 6, 3];
+    const arr = [9, 5, 8, 12, 185, 2, 7, 6, 3];
+    console.log("unsorted Array", arr);
+
+    const a = [];
 
     function selectionSort(arr) {
         for (let i = 0; i < arr.length - 1; i++) {
-           let minPos = i;
+            let minPos = i;
             for (let j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[minPos]) {
                     minPos = j;
@@ -28,6 +31,8 @@
             let temp = arr[i];
             arr[i] = arr[minPos];
             arr[minPos] = temp;
+            // a.push([...arr]);
+            // console.log(arr);
         }
 
 
@@ -35,8 +40,9 @@
 
 
     selectionSort(arr);
+    console.log(a);
 
-    console.log(arr);
+    console.log("sorted arr", arr);
 
 
 </script>
