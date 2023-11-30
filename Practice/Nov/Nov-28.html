@@ -10,5 +10,33 @@
 <body>
     <h1>Nov-28</h1>
 </body>
+<script>
+    console.log("What is first class function");
+
+    const greet = function (name) {
+        console.log(`Hello,${name}`);
+    }
+
+    greet("APJCR");
+
+    function welcome(fn, name) {
+        fn(name);
+    }
+
+    welcome(greet, "Basundi")
+    function grandWelcome(name) {
+
+        return function () {
+            console.log("hi" + name + " Greand welcome from APJCR");
+        }
+
+    }
+
+    const temp = grandWelcome();
+    temp();
+
+
+
+</script>
 
 </html>
