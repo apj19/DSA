@@ -11,4 +11,67 @@
     <h1>Dec-13</h1>
 </body>
 
+<script>
+
+    // console.log("Recrusion in array Linear search");
+
+    // const arr = [10, 12, 15, 5, 4, 9];
+
+    // function linearSearch(arr, x, end) {
+
+    //     if (end < 0) return -1;
+
+    //     if (arr[end] == x) return end;
+
+    //     return linearSearch(arr, x, end - 1);
+    // }
+
+    // console.log(linearSearch(arr, 15, arr.length - 1));
+
+    // console.log("Recrusion in array Binary search search");
+
+    // function bs(arr, x, start, end) {
+
+    //     if (start > end) return -1;
+
+    //     let m = parseInt((start + end) / 2);
+
+    //     if (arr[m] == x) return m;
+
+    //     if (arr[m] < x) {
+    //         return bs(arr, x, m + 1, end);
+    //     } else {
+    //         return bs(arr, x, start, m - 1);
+    //     }
+
+    // }
+
+    // const arr = [2, 4, 6, 8, 10, 12, 15, 18];
+
+    // console.log(bs(arr, 18, 0, arr.length - 1));
+
+    console.log("rotate array by 1 array");
+    const arr = [1, 2, 3, 4, 5];
+
+    function rotate(arr, index, value) {
+
+        if (index == arr.length) return;
+
+
+        let t = arr[index];
+        arr[index] = value;
+        // console.log(arr);
+
+        rotate(arr, index + 1, t);
+    }
+
+    rotate(arr, 0, arr[arr.length - 1]);
+
+    console.log(arr);
+
+
+
+
+</script>
+
 </html>
