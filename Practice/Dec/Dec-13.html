@@ -50,24 +50,39 @@
 
     // console.log(bs(arr, 18, 0, arr.length - 1));
 
-    console.log("rotate array by 1 array");
-    const arr = [1, 2, 3, 4, 5];
+    // console.log("rotate array by 1 array");
+    // const arr = [1, 2, 3, 4, 5];
 
-    function rotate(arr, index, value) {
+    // function rotate(arr, index, value) {
 
-        if (index == arr.length) return;
+    //     if (index == arr.length) return;
 
 
-        let t = arr[index];
-        arr[index] = value;
-        // console.log(arr);
+    //     let t = arr[index];
+    //     arr[index] = value;
+    //     // console.log(arr);
 
-        rotate(arr, index + 1, t);
-    }
+    //     rotate(arr, index + 1, t);
+    // }
 
-    rotate(arr, 0, arr[arr.length - 1]);
+    // rotate(arr, 0, arr[arr.length - 1]);
 
-    console.log(arr);
+    // console.log(arr);
+
+    // let str = "hello     world    my    name   is       raman";
+
+    // let strArray = str.split(' ').filter((e) => e != '').join(' ');
+
+    // console.log(strArray);
+
+    let currentDate = new Date();
+    let hr = currentDate.getHours();
+    let min = currentDate.getMinutes();
+    let sec = currentDate.getMinutes();
+
+    console.log(`${hr}:${min}:${sec}`);
+
+
 
 
 
