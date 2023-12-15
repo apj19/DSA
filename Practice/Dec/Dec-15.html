@@ -10,5 +10,69 @@
 <body>
     <h1>Dec-15</h1>
 </body>
+<script>
+    console.log("Merge sort understood");
+
+    function mergeSort(arr, start, end) {
+
+        if (start == end) {
+            return;
+        }
+
+        let mid = parseInt(start + (end - start) / 2);
+
+        mergeSort(arr, start, mid);
+        mergeSort(arr, mid + 1, end);
+        merge(arr, start, mid, end);
+    }
+
+    function merge(arr, start, mid, end) {
+
+        // console.log(arr[start], arr[mid]);
+        // console.log(arr[mid + 1], arr[end]);
+
+        const temp = [];
+
+        let left = start;
+        let right = mid + 1;
+
+        while (left <= mid && right <= end) {
+
+            if (arr[left] <= arr[right]) {
+                temp.push(arr[left]);
+                left++;
+            } else {
+                temp.push(arr[right]);
+                right++;
+            }
+        }
+
+        while (left <= mid) {
+            temp.push(arr[left]);
+            left++;
+
+        }
+        while (right <= end) {
+            temp.push(arr[right]);
+            right++;
+        }
+
+        for (let i = 0; i < temp.length; i++) {
+            arr[start] = temp[i];
+            start++;
+        }
+        // console.log(temp);
+
+
+    }
+
+    const arr = [10, 5, 12, 2, 15, 35, 40, 1, 100];
+    let start = 0;
+    let end = arr.length - 1;
+
+    mergeSort(arr, start, end);
+    console.log("original", arr);
+
+</script>
 
 </html>
