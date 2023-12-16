@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dec-16 Saturday</h1>
+</body>
+<script>
+    console.log("Merge Sort Revision");
+
+    function mergeSort(arr, start, end) {
+
+        if (start == end) return;
+
+        let mid = parseInt(start + (end - start) / 2);
+
+        mergeSort(arr, start, mid);//left part
+        mergeSort(arr, mid + 1, end);//right part
+        merge(arr, start, mid, end);//sort and merge
+
+    }
+
+    function merge(arr, start, mid, end) {
+
+        let left = start;
+        let right = mid + 1;
+
+        const temp = [];
+
+        while (left <= mid && right <= end) {
+
+            if (arr[left] <= arr[right]) {
+                temp.push(arr[left]);
+                left++
+            } else {
+                temp.push(arr[right]);
+                right++
+            }
+        }
+
+        while (left <= mid) {
+            temp.push(arr[left]);
+            left++
+        }
+
+        while (right <= end) {
+            temp.push(arr[right]);
+            right++
+
+        }
+
+        for (let i = 0; i < temp.length; i++) {
+
+            arr[start] = temp[i];
+            start++
+
+
+        }
+
+
+    }
+
+    const arr = [100, 1, 50, 20, 41, 25, 6];
+
+    let start = 0;
+    let end = arr.length - 1;
+    console.log(arr);
+
+    mergeSort(arr, start, end);
+
+    console.log(arr);
+
+
+</script>
+
+</html>
