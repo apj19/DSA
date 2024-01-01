@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Jan-01</h1>
+</body>
+
+<script>
+    console.log("pattrens");
+    // let n = 7;
+    // let str = ""
+    // for (let i = 0; i < n; i++) {
+    //     //printing rows
+    //     for (let j = 0; j < n; j++) {
+    //         str = str + "* ";
+    //     }
+    //     str = str + '\n';
+    // }
+    // console.log(str);
+
+    // for (let i = 0; i < n; i++) {
+    //     //printing rows
+    //     for (let j = 0; j <= i; j++) {
+    //         str = str + "* ";
+    //     }
+    //     str = str + '\n';
+    // }
+    // console.log(str);
+
+    // // let nst = 1;
+    // let nsp = Math.floor(n / 2);
+    // for (let i = 1; i <= n; i++) {
+    //     //printing rows
+
+    //     for (let j = 1; j <= nsp; j++) {
+    //         str = str + " ";
+    //     }
+
+    //     for (let k = 1; k <= nst; k++) {
+    //         str = str + "*"
+    //     }
+
+    //     if (i <= Math.floor(n / 2)) {
+    //         nst = nst + 2;
+    //         nsp = nsp - 1;
+    //     } else {
+    //         nst = nst - 2;
+    //         nsp = nsp + 1;
+    //     }
+
+    //     str = str + '\n'
+    // }
+
+    // let nst = Math.ceil(n / 2);
+    // let nsp = 1;
+
+    // for (let i = 1; i <= n; i++) {
+    //     //printing rows
+
+    //     for (let j = 1; j <= nst; j++) {
+    //         str += '*'
+    //     }
+    //     for (let k = 1; k <= nsp; k++) {
+    //         str += ' '
+    //     }
+
+    //     for (let l = 1; l <= nst; l++) {
+    //         str += '*'
+    //     }
+
+    //     if (i <= Math.floor(n / 2)) {
+    //         nst = nst - 1;
+    //         nsp += 2;
+    //     } else {
+    //         nst += 1;
+    //         nsp -= 2;
+    //     }
+
+
+
+    //     str = str + '\n'
+    // }
+    // console.log(str);
+
+    {
+        let n = 5;
+        let str = "";
+        let count = 1;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                str = str + count + ' ';
+                count++;
+            }
+            str += '\n';
+
+        }
+
+        console.log(str);
+    }
+
+
+
+</script>
+
+</html>
