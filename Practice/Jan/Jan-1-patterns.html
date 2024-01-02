@@ -231,6 +231,171 @@
     }
 
 
+    {
+        console.log("Pttren-14");
+
+        let n = 5;
+
+        let str = '';
+
+        for (let i = 1; i <= n; i++) {
+            let print = 'A';
+            for (let j = 1; j <= i; j++) {
+                str += print;
+                let charCode = print.charCodeAt(0);
+                print = String.fromCharCode(charCode + 1);
+            }
+            str += '\n';
+        }
+
+        console.log(str);
+
+    }
+
+    {
+        console.log("Pttren-16");
+
+        let n = 5;
+
+        let str = '';
+        let print = 'A';
+        for (let i = 1; i <= n; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                str += print;
+
+            }
+            let charCode = print.charCodeAt(0);
+            print = String.fromCharCode(charCode + 1);
+            str += '\n';
+        }
+
+        console.log(str);
+
+    }
+
+    {
+        console.log("Pttren-17");
+
+        let n = 4;
+
+        let str = '';
+
+        let nsp = n - 1;
+        let nst = 1;
+
+        for (let i = 1; i <= n; i++) {
+
+            for (let j = 1; j <= nsp; j++) {
+                str += ' ';
+
+            }
+            let print = 'A';
+            for (let k = 1; k <= nst; k++) {
+
+                if (nsp + k < n) {
+                    str += print;
+                    let charCode = print.charCodeAt(0);
+                    print = String.fromCharCode(charCode + 1);
+                } else {
+                    str += print;
+                    let charCode = print.charCodeAt(0);
+                    print = String.fromCharCode(charCode - 1);
+
+                }
+
+
+            }
+            nsp--;
+            nst += 2;
+            // let charCode = print.charCodeAt(0);
+            // print = String.fromCharCode(charCode + 1);
+            str += '\n';
+        }
+
+        console.log(str);
+
+    }
+
+
+
+    {
+        console.log("Pttren-18");
+
+        let n = 5;
+
+        let str = '';
+        let print = 'E';
+
+
+        for (let i = 1; i <= n; i++) {
+
+
+
+            for (let k = 1; k <= i; k++) {
+                str += print;
+                let charCode = print.charCodeAt(0);
+                print = String.fromCharCode(charCode + 1);
+
+            }
+            let charCode = "E".charCodeAt(0);
+            print = String.fromCharCode(charCode - i);
+
+            // let charCode = print.charCodeAt(0);
+            // print = String.fromCharCode(charCode + 1);
+            str += '\n';
+        }
+
+        console.log(str);
+
+    }
+
+    {
+        console.log("Pttren-19");
+
+        let n = 5;
+
+        let str = '';
+
+        let nst = 2 * n;
+        let nsp = 0;
+        for (let i = 1; i <= 2 * n; i++) {
+
+
+            for (let j = 1; j <= parseInt(nst / 2); j++) {
+                str += '*';
+            }
+            for (let k = 1; k <= nsp; k++) {
+                str += ' ';
+
+            }
+            for (let l = 1; l <= parseInt(nst / 2); l++) {
+
+                str += '*';
+            }
+
+            if (i < parseInt(2 * n / 2)) {
+                nst -= 2;
+                nsp += 2;
+            } else if (i == parseInt((2 * n) / 2)) {
+                nst = 2;
+                nsp = 2 * n - 2;
+            } else {
+                nst += 2;
+                nsp -= 2;
+            }
+
+
+            // let charCode = print.charCodeAt(0);
+            // print = String.fromCharCode(charCode + 1);
+            str += '\n';
+        }
+
+        console.log(str);
+
+    }
+
+
 
 </script>
 
