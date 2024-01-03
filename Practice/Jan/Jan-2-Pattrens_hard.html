@@ -11,84 +11,133 @@
     <h1>Pattrens-Hard</h1>
 </body>
 <script>
+    // {
+    //     console.log("Pattrens Hard-19");
+
+    //     let n = 5;
+
+    //     let nst = 2 * n;
+    //     let nsp = 0;
+    //     let str = '';
+
+    //     //for no of rows
+    //     for (let i = 1; i <= 2 * n; i++) {
+
+    //         //first star
+    //         for (let j = 0; j < parseInt(nst / 2); j++) {
+    //             str = str + '*';
+    //         }
+    //         for (let k = 0; k < nsp; k++) {
+
+    //             str = str + ' ';
+    //         }
+    //         for (let l = 0; l < parseInt(nst / 2); l++) {
+
+    //             str = str + '*';
+    //         }
+
+    //         str = str + '\n';
+
+    //         if (i < n) {
+    //             nst = nst - 2;
+    //             nsp = nsp + 2;
+    //         } else if (i == n) {
+    //             nst = 2;
+    //             nsp = 2 * (n - 1);
+    //         } else {
+    //             nst = nst + 2;
+    //             nsp = nsp - 2;
+    //         }
+
+    //     }
+    //     console.log(str);
+
+
+    // }
+
+    // {
+    //     //1 *         *
+    //     //2 * *     * *
+    //     //3 * * * * * *
+    //     //4 * *     * *
+    //     //5 *         *
+
+    //     console.log("pattren hard-20");
+    //     let n = 3
+
+    //     let str = '';
+    //     let nst = 2;
+    //     let nsp = 2 * (n - 1);
+
+    //     for (let i = 1; i <= 2 * n - 1; i++) {
+
+    //         console.log(nst, nsp);
+    //         for (let j = 1; j <= parseInt(nst / 2); j++) {
+    //             str = str + '*'
+
+
+    //         }
+    //         for (let j = 1; j <= nsp; j++) {
+
+    //             str = str + ' ';
+    //         }
+    //         for (let l = 1; l <= parseInt(nst / 2); l++) {
+
+    //             str = str + '*'
+
+    //         }
+
+    //         str = str + '\n';
+
+    //         if (i < n) {
+    //             nst = nst + 2;
+    //             nsp = nsp - 2;
+    //         } else {
+    //             nst = nst - 2;
+    //             nsp = nsp + 2;
+    //         }
+
+    //     }
+    //     console.log(str);
+    // }
+
+
     {
-        console.log("Pattrens Hard-19");
+        // 33333
+        // 32223
+        // 32123
+        // 32223
+        // 33333
 
-        let n = 5;
-
-        let nst = 2 * n;
-        let nsp = 0;
-        let str = '';
-
-        //for no of rows
-        for (let i = 1; i <= 2 * n; i++) {
-
-            //first star
-            for (let j = 0; j < parseInt(nst / 2); j++) {
-                str = str + '*';
-            }
-            for (let k = 0; k < nsp; k++) {
-
-                str = str + ' ';
-            }
-            for (let l = 0; l < parseInt(nst / 2); l++) {
-
-                str = str + '*';
-            }
-
-            str = str + '\n';
-
-            if (i < n) {
-                nst = nst - 2;
-                nsp = nsp + 2;
-            } else if (i == n) {
-                nst = 2;
-                nsp = 2 * (n - 1);
-            } else {
-                nst = nst + 2;
-                nsp = nsp - 2;
-            }
-
-        }
-        console.log(str);
-
-
-    }
-
-    {
-        //1 *         *
-        //2 * *     * *
-        //3 * * * * * *
-        //4 * *     * *
-        //5 *         *
-
-        console.log("pattren hard-20");
-        let n = 3
-
+        let n = 3;
         let str = '';
         let nst = 2;
-        let nsp = 2 * (n - 1);
+        let nsp = 2 * n - 1 - 2;
+        let c1 = n;
+        let c2 = n;
+        let c3 = n;
 
         for (let i = 1; i <= 2 * n - 1; i++) {
 
-            console.log(nst, nsp);
+
             for (let j = 1; j <= parseInt(nst / 2); j++) {
-                str = str + '*'
-
-
+                str = str + c1;
+                c1--;
             }
-            for (let j = 1; j <= nsp; j++) {
 
+            for (let k = 1; k <= nsp; k++) {
                 str = str + ' ';
-            }
-            for (let l = 1; l <= parseInt(nst / 2); l++) {
-
-                str = str + '*'
 
             }
 
-            str = str + '\n';
 
+
+            for (let l = parseInt(nst / 2); l >= 1; l--) {
+                str = str + c2;
+                c2--;
+            }
+
+            str = str + '\n'
             if (i < n) {
                 nst = nst + 2;
                 nsp = nsp - 2;
@@ -96,8 +145,14 @@
                 nst = nst - 2;
                 nsp = nsp + 2;
             }
+            c1 = n;
+            c2 = n;
+
+
+
 
         }
+
         console.log(str);
     }
 
