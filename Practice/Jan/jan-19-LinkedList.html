@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liskedlist</title>
+</head>
+
+<body>
+    <h1>Linked list in javascript
+    </h1>
+</body>
+
+<script>
+    console.log("Linked list in JS");
+
+
+    class Node {
+
+        constructor(data, next = null) {
+            this.data = data;
+            this.next = next;
+        }
+
+    }
+
+
+    const n1 = new Node(10);
+    const n2 = new Node(20);
+    n1.next = n2;
+
+    // console.log(n1, n2);
+
+    class LinkedList {
+
+        constructor(head = null) {
+            this.head = head;
+            this.size = 0;
+        }
+
+        insertAtfirst(data) {
+            const node = new Node(data);
+            node.next = this.head;
+            this.head = node;
+            this.size++;
+        }
+
+        insertAtLast(data) {
+            const node = new Node(data);
+            let tailNode = this.head;
+            while (tailNode.next != null) {
+                tailNode = tailNode.next
+            }
+            tailNode.next = node;
+            this.size++;
+
+        }
+
+        insertAtIndex(data, index) {
+
+            let newNode = new Node(data);
+            let count = 1;
+            let temp = this.head;
+
+            while (count < index) {
+                temp = temp.next;
+                count++;
+            }
+            // console.log(temp);
+            newNode.next = temp.next;
+            temp.next = newNode;
+
+
+            this.size++;
+
+        }
+
+        printList() {
+            let current = this.head;
+            let str = '';
+
+            while (current) {
+                str = str + current.data + ' ';
+                current = current.next;
+            }
+            console.log("linkedlist", str);
+        }
+
+
+    }
+
+    const ll = new LinkedList();
+    // console.log(ll);
+    ll.insertAtfirst(1);
+    ll.insertAtfirst(2);
+    ll.insertAtfirst(3);
+    ll.insertAtLast(99);
+    ll.insertAtLast(101);
+    ll.insertAtLast(102);
+
+
+
+
+
+    ll.insertAtIndex(50, 3);
+    ll.printList();
+    // console.log("size", ll.size);
+    // ll.insertAtLast(100);
+
+    //add at start
+
+
+
+</script>
+
+</html>

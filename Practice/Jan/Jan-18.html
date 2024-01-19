@@ -11,4 +11,55 @@
     <h1>Jan-18</h1>
 </body>
 
+<script>
+    console.log("linked list ");
+
+    class Node {
+
+        constructor(data, next = null) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+
+    class LinkedList {
+        constructor(head = null) {
+            this.head = head;
+        }
+
+        insertaAtFirst(data) {
+            this.head = new Node(data, this.head)
+        }
+
+        printdata() {
+
+            let current = this.head;
+
+            while (current) {
+                console.log(current.data);
+                current = current.next;
+            }
+        }
+    }
+
+
+
+
+    const n1 = new Node(10);
+    const n2 = new Node(12);
+
+
+    const list = new LinkedList();
+    list.insertaAtFirst(1);
+    list.insertaAtFirst(2);
+
+
+    // console.log(list);
+    list.printdata();
+
+
+
+</script>
+
 </html>
