@@ -11,4 +11,54 @@
     <h1>Mar-4</h1>
 </body>
 
+<script>
+    console.log("pattren")
+    let str = '';
+    let cnt = 0;
+    let flag = false;
+    let iflag = true;
+    let col = 6;
+
+    for (let i = 0; i < 6; i++) {
+
+        for (let k = 1; k <= 6 - col; k++) {
+            str = str + ' ';
+        }
+        for (let j = 1; j <= col; j++) {
+
+            if (cnt < 9 && iflag) {
+                cnt++;
+                if (cnt == 9) {
+                    iflag = false;
+                }
+            }
+            str = str + ' ' + cnt;
+            if (cnt == 9) {
+                cnt = 0;
+            } else if (cnt == 0) {
+                cnt = 9;
+            }
+        }
+        col--;
+        str = str + '\n';
+    }
+    console.log(str)
+    col = 2;
+    str = '';
+    for (let i = 0; i < 5; i++) {
+
+        for (let k = 1; k <= 6 - col; k++) {
+            str = str + ' ';
+        }
+        for (let k = 1; k <= col; k++) {
+            str = str + '*';
+        }
+        col++;
+        str = str + '\n';
+
+    }
+
+    console.log(str)
+</script>
+
 </html>
